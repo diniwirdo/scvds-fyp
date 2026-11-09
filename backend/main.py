@@ -14,7 +14,7 @@ os.makedirs("uploads", exist_ok=True)
 # CORS so React can talk to us
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://scvds-fyp1.vercel.app"], # We will change this to your Vercel URL later for security
     allow_methods=["*"],
     allow_headers=["*"],
 )
