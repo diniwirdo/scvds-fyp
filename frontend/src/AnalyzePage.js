@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { uploadFile, analyzeContract } from "./api";
-import { FaCloudUploadAlt, FaCheckCircle } from "react-icons/fa";
+import { FaCloudUploadAlt } from "react-icons/fa";
 
 function AnalyzePage() {
   const [file, setFile] = useState(null);
@@ -27,7 +27,7 @@ function AnalyzePage() {
       const uploadResult = await uploadFile(file);
       setMessage("Running GATv2 GNN Analysis (this takes a few seconds)...");
 
-      const analysisResult = await analyzeContract(uploadResult.contract_id);
+      await analyzeContract(uploadResult.contract_id);
       setMessage("Analysis complete! Generating report...");
 
       setTimeout(() => {
