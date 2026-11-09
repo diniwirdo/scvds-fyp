@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+pandas
+torch
+torch-geometric
+python-multipart
+aiofiles
